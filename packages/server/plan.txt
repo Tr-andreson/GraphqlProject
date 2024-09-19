@@ -1,0 +1,32 @@
+-- Products api
+
+fetch products slug api
+fetch products by name
+list products (filter api)
+list select api
+app product api
+fetch products
+update by id
+upldate id which is active
+delete id
+
+
+
+--- Users api
+
+search 
+fetch user api
+me data
+put api
+
+
+-- Auth Api
+login
+register
+forgot
+reset/:token
+reset
+google
+google/callback
+facebook 
+facebook/callback
