@@ -1,8 +1,2 @@
 .next
 node_modules
-gql
-
-dist
-/dist
-dist/*
-dist/**/*

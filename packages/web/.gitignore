@@ -13,11 +13,6 @@ coverage
 out/
 build
 
-build/**
-dist/**
-**/dist/**
-.next/**
-
 # misc
 .DS_Store
 *.pem
@@ -36,18 +31,5 @@ yarn-error.log*
 /test-results/
 /playwright-report/
 /playwright/.cache/
-**/**/.env.*
-**/**/.env
 
 /.npm-only-allow
-
-# Turbo
-
-.turbo
-
-.vitepress/cache/
-apps/docs/.vitepress/cache/
-apps/docs/.vitepress/config.mts.timestamp-*
-apps/docs/.vitepress/dist/
-.vercel
-.env*.local
