@@ -1,10 +1,13 @@
 import { Product } from "../../db/modals/product.modal";
-import { Arg, Field, InputType, Mutation, ObjectType, Query, Resolver, ID } from "type-graphql"
+import { Arg, Field, InputType, Mutation, ObjectType, Query, Resolver, ID, Ctx } from "type-graphql"
 import slugger from "slug"
 import { GraphQLUpload, FileUpload } from "graphql-upload-ts";
 import path from "node:path"
 import { createWriteStream } from "node:fs"
 import { console } from "node:inspector";
+
+import i from "i18n"
+import { Request } from "express";
 
 
 // type 
@@ -106,10 +109,18 @@ export class ProductResolver {
   }
 
   @Query(() => [ProductT])
-  public async getProduct(): Promise<ProductT[] | any> {
+  // @UseMiddleware(VerifyToken)
+  public async getProduct(
+    @Arg("limit") limit: number,
+    @Ctx("request") request: Request
+  ): Promise<ProductT[] | any> {
 
     try {
-      const product = await Product.find()
+      const location = i.getLocale(request)
+      console.log(location, "llll")
+      console.log("working")
+
+      const product = await Product.find().limit(limit)
 
       return product
     } catch (error) {

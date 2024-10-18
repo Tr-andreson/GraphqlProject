@@ -1,0 +1,3 @@
+mutation registerUser($body: AuthInputT!) {
+  registerUser(body: $body)
+}

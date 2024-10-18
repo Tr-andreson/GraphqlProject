@@ -1,6 +1,6 @@
 
 import { User } from "../../db/modals/user.modal";
-import { Arg, Ctx, Field, ID, Mutation, ObjectType, Query, Resolver } from "type-graphql";
+import { Ctx, Field, ID, ObjectType, Query, Resolver } from "type-graphql";
 
 // {
 //   _id: new ObjectId('66e2996b74e9e5abf583d2e7'),
@@ -86,27 +86,6 @@ export class UserResolver {
 
   }
 
-  @Mutation(() => String)
-  public async checkUser(
-    @Arg("body") body: string
-  ) {
-    try {
-
-      console.log(body)
-      // const user = new User(body)
-      // const savedUser = await user.save()
-      //
-      // if (!savedUser) {
-      //   return "Error in try"
-      // }
-      //
-      return "User registerd"
-
-    } catch (error) {
-      return "Error Occured"
-
-    }
-  }
 
 
 }

@@ -1,0 +1,4 @@
+
+mutation loginUser($body: AuthLoginT!) {
+  loginUser(body: $body)
+}

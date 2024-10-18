@@ -191,16 +191,13 @@ export class AuthResolver {
 
   }
 
-  @Query(() => String)
+  @Mutation(() => String)
   public async logout(
     @Ctx("res") res: Response
   ) {
     try {
-
       res.clearCookie("redisSession")
       return "Logout succesfully"
-
-
     } catch (error) {
       return "Error created"
 

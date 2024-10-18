@@ -1,0 +1,8 @@
+query fetchProducts($limit: Float!) {
+  getProduct(limit: $limit) {
+    id
+    name
+    slug
+    imageUrl
+  }
+}

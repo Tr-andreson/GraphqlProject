@@ -1,0 +1,15 @@
+query fetchProductByID($getSingleProductByIdId: String!) {
+  getSingleProductById(id: $getSingleProductByIdId) {
+    id
+    sku
+    name
+    slug
+    imageUrl
+    imageKey
+    description
+    quantity
+    price
+    taxable
+    isActive
+  }
+}
